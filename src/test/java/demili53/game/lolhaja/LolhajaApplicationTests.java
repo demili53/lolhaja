@@ -11,6 +11,8 @@ public class LolhajaApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		System.out.println("test");
+
 	}
 
 }
