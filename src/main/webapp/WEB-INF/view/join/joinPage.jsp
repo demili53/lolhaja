@@ -2,12 +2,16 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-    <title>FRONT</title>
+    <title>member join</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
-<a href="/user/login">로그인</a>
-<a href="/user/login">회원가입</a>
+<form method="post" action="/user/join">
+    <input type="text" name="loginId">
+    <input type="password" name="password">
+    <button type="submit">회원가입</button>
+</form>
+
 
 </body>
 </html>

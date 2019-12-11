@@ -1,5 +1,6 @@
 package demili53.game.lolhaja.user.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import javax.persistence.*;
@@ -11,10 +12,14 @@ public class DemiUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private Long Id;
+    @JsonIgnore
+    @Column(unique = true)
     private String loginId;
     private String name;
     private String email;
+    @JsonIgnore
     private String password;
 
     @ElementCollection(fetch = FetchType.EAGER)
@@ -22,6 +27,13 @@ public class DemiUser {
 
     public DemiUser() {
         authorities = new HashSet<>();
+    }
+    public DemiUser(String loginId,String encrtyptPassword) {
+        authorities = new HashSet<>();
+        this.name="뉴비";
+        this.loginId = loginId;
+        this.password = encrtyptPassword;
+
     }
 
     public Long getId() {

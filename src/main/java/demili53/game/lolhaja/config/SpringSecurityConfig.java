@@ -39,7 +39,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         // 로그인 설정
         http.authorizeRequests()
                 // ROLE_USER, ROLE_ADMIN으로 권한 분리 유알엘 정의
-                .antMatchers("/", "/user/login", "/error**").permitAll()
+                .antMatchers("/", "/user/login", "/error**","/user/join/**").permitAll()
                 .antMatchers("/**").access("ROLE_USER")
                 .antMatchers("/**").access("ROLE_ADMIN")
                 .antMatchers("/admin/**").access("ROLE_ADMIN")

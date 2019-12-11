@@ -7,9 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class FrontController {
     @GetMapping("/")
     public String front(){
-        if(true){
-            throw new IllegalArgumentException("test");
-        }
         return "/front";
     }
 

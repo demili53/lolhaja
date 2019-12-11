@@ -11,7 +11,7 @@
         <input type="password" name="password">
         <button type="submit">로그인</button>
     </form>
-
+    <a href="/user/login">회원가입</a>
 
 </body>
 </html>
